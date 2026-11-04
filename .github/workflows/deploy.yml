@@ -7,7 +7,7 @@ on:
 
 # Permissões necessárias para publicar no GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -36,6 +36,12 @@ jobs:
 
       - name: Compilar o projeto (Vite build)
         run: npm run build
+
+      - name: Publicar cópia no branch gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          branch: gh-pages
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
