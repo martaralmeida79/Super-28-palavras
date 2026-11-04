@@ -1,0 +1,6 @@
+{
+  "name": "SuperPalavras - Método das 28 Palavras",
+  "description": "Aplicação educativa para alunos do 2.º ano (7 a 8 anos) para aprendizagem e treino da leitura e escrita com o Método das 28 Palavras, quadro silábico e jogos interativos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
