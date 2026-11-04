@@ -10,7 +10,9 @@ interface Props {
 export const PdfModal: React.FC<Props> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
-  const pdfUrl = '/assets/aistudio/quadro_sila_bico_texto_f109e36b.pdf';
+  const baseUrl = import.meta.env.BASE_URL || './';
+  const cleanBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+  const pdfUrl = `${cleanBase}assets/aistudio/quadro_sila_bico_texto_f109e36b.pdf`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-900/75 backdrop-blur-sm animate-in fade-in duration-200">
